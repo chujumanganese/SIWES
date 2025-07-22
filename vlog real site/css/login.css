@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a
+{
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+}
+:root
+{
+    --back-home-color:#65d3cf;
+    --yellow: #FFF2b6;
+}
+body 
+{
+    background: var(--back-home-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 80dvh;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    gap: 2em;
+    color: rgba(0, 0, 0, 0.774);
+    padding-bottom: 1em;
+}
+h1{
+    font-size: 1.8rem;
+}
+.container 
+{
+    min-height: 400px;
+    width: 500px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 2em;
+    background: var(--yellow);
+    border-radius: 16px;
+    gap: 1em;
+    box-shadow: 5px 5px 10px;
+}
+label{
+    width: 90%;
+    height: 3rem;
+    position: relative;
+}
+label img{
+    position: absolute;
+    top: calc(1.5rem - 20px);
+    left: 1em;
+    transform: translateY(50%);
+}
+
+input, button
+{
+    height: 3rem;
+    border-radius: 50px;
+    outline: none;
+    border: 1px solid black;
+    padding-inline: 1em;
+}
+input{
+    width: 100%;
+    padding-left: 3em;
+}
+button
+{
+    width: 90%;
+    background: rgba(255, 0, 0, 0.734);
+    color: white;
+    box-shadow: 3px 3px black;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    position: relative;
+}
+button .from{
+    position: absolute;
+    right: 0;
+    height: 70%;
+    width: 50px;
+    justify-self: flex-end;
+}
+button:hover{
+    box-shadow: none;
+}
+.g 
+{
+    display: flex;
+    gap: 0.5em;
+}
+
+.k
+{
+    width: 500px;
+    font-size: 1.1rem;
+    margin-top: 1em;
+}
+.k a{
+    display: flex;
+    column-gap: 1em;
+    cursor: pointer;
+}
+.k img{
+    animation: anim 1s infinite;
+    cursor: pointer;
+}
+@keyframes anim{
+    from{
+        transform: translateX(0px) scale(1);
+    }
+    to{
+        transform: translateX(6px) scale(1.1);
+    }
+}
+@media (max-width: 501px) {
+    body{
+        width: 100dvw;
+    }
+    .container, .k{
+        width: 95%;
+    }
+    label, button{
+        width: 100%;
+    }
+}

@@ -1,0 +1,72 @@
+:root
+{
+    --back-home:#65d3cf;
+    --nav-height: 2rem;
+    --body-padding: clamp(2dvw, 4dvw, 5dvw);
+    --all-white: white;
+    --yellow: #FFF2b6;
+    --tiny: 0.921rem;
+}
+footer{
+    position: relative;
+    background: var(--yellow);
+    height: fit-content;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+    line-height: 1.62;
+    padding-bottom: 3em;
+}
+footer h2{
+    font-size: 1.1rem;
+}
+footer .cont{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+footer button{
+    padding-inline: 2em;
+    padding-block: 0.5em;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    margin-bottom: 2em;
+    border: 1px solid rgba(0, 0, 0, 0.692);
+}
+.g-buttons button{
+    padding-inline: 3em;
+    margin: 0.3em;
+    font-size: 0.89rem;
+    outline: 0;
+}
+.news12 {
+    display: flex;
+    column-gap: 1em;
+}
+.news12:not(:last-child){
+    margin-bottom: 1.5em;
+}
+.news12 .left{
+    width: 100px;
+}
+.blabas{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+footer .lefter{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+.lefter p{
+    font-size: 1.28rem;
+}
+footer:after{
+    content: " ";
+    border-bottom: 1px solid black;
+    position: absolute;
+    width: calc(100% - (2 * var(--body-padding)));
+    bottom: var(--body-padding);
+}

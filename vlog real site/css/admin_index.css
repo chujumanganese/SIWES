@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+:root
+{
+    --back-home-color:#65d3cf;
+    --yellow: #FFF2b6;
+    --tiny: 0.921rem;
+    --cb: #ff5f69;
+}
+body{
+    background: var(--back-home-color);
+    color: rgba(0, 0, 0, 0.785);
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.full{
+    height: 100dvh;
+    width: calc(100dvw - 300px);
+    padding: 2em;
+    padding-inline: 4em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: space-between;
+}
+aside{
+    padding-block: 1em;
+    width: 300px;
+    background: var(--yellow);
+    transition: 2s;
+}
+aside ul{
+    display: grid;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.up + ul{
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
+ul, li{
+    list-style-type: none;
+    line-height: 1.62;
+    font-size: 1.1rem;
+}
+li{
+    padding-block: 1em;
+    padding-inline: 2em;
+    transition: all 0.4s ease-in-out;
+}
+li a{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    cursor: pointer;
+}
+li:hover{
+    background: var(--back-home-color);
+}
+.up h1{
+    margin-left: 2em;
+    color: rgba(0, 128, 0, 0.658);
+}
+.cove button{
+    border: 0;
+    outline: 0;
+    box-shadow: 3px 3px black;
+    padding: 1.4em;
+    padding-inline: 2em;
+    border-radius: 50px;
+    background: var(--cb);
+    color: white;
+    font-weight: 600;
+}
+nav, .cove{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 1em;
+}
+.cove h2{
+    color: rgba(0, 0, 0, 0.785);
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+nav{
+    background: white;
+    padding: 2em;
+    border-radius: 50px;
+    align-items: center;
+}
+nav .left, nav .right {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+.left h1:first-child{
+    color: rgba(0, 0, 0, 0.623);
+}
+nav .right{
+    display: flex;
+    align-items: center;
+    gap: 2.5em;
+}
+.right .dark{ /* The toogle button */
+    width: 50px;
+    height: 30px;
+    position: relative;
+    display: inline-block;
+}
+.dark input[type="checkbox"]{
+    height: 0%;
+    width: 0%;
+    opacity: 0;
+}
+.right .cover{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.right .cover::before{
+    position: absolute;
+    content: "";
+    height: 23px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.right img:not(:last-child){
+    box-sizing: content-box;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    opacity: 0.5;
+}
+.right img:nth-child(3){
+    background: lightgray;
+}
+.right img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-position:center;
+    cursor: pointer;
+}
+input:checked + .cover{
+    background-color: green;
+}
+input:focus + .cover {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .cover:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.right .cover {
+  border-radius: 34px;
+}
+
+.right span.cover:before {
+  border-radius: 50%;
+}
+section{
+    height: 60dvh;
+    background: white;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+    justify-content: space-between;
+    border-radius: 16px;
+    font-size: 1.2rem;
+}
+section .bender{
+    display: flex;
+    gap: 3em;
+    height: 45%;
+}
+.bender .box{
+    flex-grow: 1;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding-inline: 2em;
+    justify-content: space-between;
+    background: var(--se);
+    border-radius: 16px;
+    cursor: pointer;
+}
+.bender .box:hover{
+    border: 2px dashed darkslategray;
+}
+section .image-cover{
+    height: calc(100% - 4em);
+    width: 15%;
+    padding-block: 1em;
+    padding-inline: 0.2em;
+    background: var(--se);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section img{
+    width: 50%;
+    height: 50%;
+    opacity: 0.8;
+}
+section p{
+    font-weight: 500;
+}

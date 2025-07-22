@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<!DOCTYPE message
+[
+    <!ENTITY client "i am the client">
+]
+>
+<name>
+    <fname>Emmanuel</fname>
+    <sname>IBE &client; </sname>
+</name>
